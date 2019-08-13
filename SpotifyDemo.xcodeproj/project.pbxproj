@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		971B9207230173AA00197138 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 971B9205230173AA00197138 /* LaunchScreen.storyboard */; };
 		971B9210230174B000197138 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971B920F230174B000197138 /* SpotifyiOS.framework */; };
 		971B921823017C4B00197138 /* SpotifyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B921723017C4B00197138 /* SpotifyHelper.swift */; };
+		976963712302928E00931296 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976963702302928E00931296 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		971B920F230174B000197138 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		971B92112301782200197138 /* SpotifyDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpotifyDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		971B921723017C4B00197138 /* SpotifyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyHelper.swift; sourceTree = "<group>"; };
+		976963702302928E00931296 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = SpotifyDemo/SpotifyHelper/NetworkManager.swift; sourceTree = SOURCE_ROOT; };
 		9772DB911AFA0C1328A37B01 /* Pods_SpotifyDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotifyDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,7 +54,6 @@
 				09E1E3FC59061F3909628B0F /* Pods-SpotifyDemo.debug.xcconfig */,
 				1BE7A1421E5219A9C3EDFA08 /* Pods-SpotifyDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -126,6 +127,7 @@
 		9769636F23028EB600931296 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				976963702302928E00931296 /* NetworkManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -246,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				976963712302928E00931296 /* NetworkManager.swift in Sources */,
 				971B91FF230173A900197138 /* LoginVC.swift in Sources */,
 				971B921823017C4B00197138 /* SpotifyHelper.swift in Sources */,
 				971B91FD230173A900197138 /* AppDelegate.swift in Sources */,

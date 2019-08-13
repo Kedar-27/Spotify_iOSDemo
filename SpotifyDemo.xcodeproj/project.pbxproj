@@ -16,6 +16,12 @@
 		971B9210230174B000197138 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971B920F230174B000197138 /* SpotifyiOS.framework */; };
 		971B921823017C4B00197138 /* SpotifyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971B921723017C4B00197138 /* SpotifyHelper.swift */; };
 		976963712302928E00931296 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976963702302928E00931296 /* NetworkManager.swift */; };
+		9769637C2302D86200931296 /* PlaylistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769637B2302D86200931296 /* PlaylistVC.swift */; };
+		9769637E2302D8F500931296 /* TracksListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9769637D2302D8F500931296 /* TracksListVC.swift */; };
+		976963812302DE9400931296 /* PlaylistResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976963802302DE9400931296 /* PlaylistResponseModel.swift */; };
+		976963832302DF4500931296 /* PlaylistTrackResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976963822302DF4500931296 /* PlaylistTrackResponseModel.swift */; };
+		976963852302E01800931296 /* TrackResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976963842302E01800931296 /* TrackResponseModel.swift */; };
+		976963872302ECFC00931296 /* TrackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976963862302ECFC00931296 /* TrackVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		971B92112301782200197138 /* SpotifyDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpotifyDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		971B921723017C4B00197138 /* SpotifyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyHelper.swift; sourceTree = "<group>"; };
 		976963702302928E00931296 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = SpotifyDemo/SpotifyHelper/NetworkManager.swift; sourceTree = SOURCE_ROOT; };
+		9769637B2302D86200931296 /* PlaylistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistVC.swift; sourceTree = "<group>"; };
+		9769637D2302D8F500931296 /* TracksListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksListVC.swift; sourceTree = "<group>"; };
+		976963802302DE9400931296 /* PlaylistResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistResponseModel.swift; sourceTree = "<group>"; };
+		976963822302DF4500931296 /* PlaylistTrackResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTrackResponseModel.swift; sourceTree = "<group>"; };
+		976963842302E01800931296 /* TrackResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackResponseModel.swift; sourceTree = "<group>"; };
+		976963862302ECFC00931296 /* TrackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackVC.swift; sourceTree = "<group>"; };
 		9772DB911AFA0C1328A37B01 /* Pods_SpotifyDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpotifyDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,6 +94,7 @@
 				971B921623017C0800197138 /* SpotifyHelper */,
 				971B921423017BB800197138 /* ViewController */,
 				971B921523017BC200197138 /* Storyboard */,
+				9769637F2302DE7100931296 /* APIResponseModel */,
 				9769636F23028EB600931296 /* Manager */,
 				971B9203230173AA00197138 /* Assets.xcassets */,
 				971B9205230173AA00197138 /* LaunchScreen.storyboard */,
@@ -104,6 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				971B91FE230173A900197138 /* LoginVC.swift */,
+				9769637B2302D86200931296 /* PlaylistVC.swift */,
+				9769637D2302D8F500931296 /* TracksListVC.swift */,
+				976963862302ECFC00931296 /* TrackVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -130,6 +146,17 @@
 				976963702302928E00931296 /* NetworkManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		9769637F2302DE7100931296 /* APIResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				976963802302DE9400931296 /* PlaylistResponseModel.swift */,
+				976963822302DF4500931296 /* PlaylistTrackResponseModel.swift */,
+				976963842302E01800931296 /* TrackResponseModel.swift */,
+			);
+			name = APIResponseModel;
+			path = Manager/APIResponseModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,10 +275,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				976963872302ECFC00931296 /* TrackVC.swift in Sources */,
+				9769637E2302D8F500931296 /* TracksListVC.swift in Sources */,
 				976963712302928E00931296 /* NetworkManager.swift in Sources */,
 				971B91FF230173A900197138 /* LoginVC.swift in Sources */,
 				971B921823017C4B00197138 /* SpotifyHelper.swift in Sources */,
+				976963832302DF4500931296 /* PlaylistTrackResponseModel.swift in Sources */,
+				976963852302E01800931296 /* TrackResponseModel.swift in Sources */,
+				9769637C2302D86200931296 /* PlaylistVC.swift in Sources */,
 				971B91FD230173A900197138 /* AppDelegate.swift in Sources */,
+				976963812302DE9400931296 /* PlaylistResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,11 +433,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 36DYQ3B3G4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SpotifyDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -426,11 +461,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 36DYQ3B3G4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SpotifyDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

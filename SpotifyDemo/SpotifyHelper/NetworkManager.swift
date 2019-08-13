@@ -29,8 +29,8 @@ extension CustomError : CustomStringConvertible {
     }
 }
 
-class ILMagentoManager: NSObject{
-    static let shared = ILMagentoManager()
+class SpotifyNetworkManager: NSObject{
+    static let shared = SpotifyNetworkManager()
     private override init() {}
     
     

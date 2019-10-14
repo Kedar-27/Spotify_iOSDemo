@@ -88,9 +88,18 @@ class SpotifyHelper: NSObject{
          */
         let scope: SPTScope = [.appRemoteControl, .playlistReadPrivate]
 
+        
+        
         if #available(iOS 11, *) {
             // Use this on iOS 11 and above to take advantage of SFAuthenticationSession
-            self.sessionManager.initiateSession(with: scope, options: .clientOnly)
+            if self.sessionManager.isSpotifyAppInstalled == true {
+                self.sessionManager.initiateSession(with: scope, options: .clientOnly)
+            }else{
+                if let link = URL(string: "https://accounts.spotify.com/authorize?client_id=\(SpotifyClientID)&response_type=code&redirect_uri=\(SpotifyRedirectURI)&scope=user-read-private%20user-read-email"){
+                           UIApplication.shared.openURL(link)
+                       }
+            }
+
         } else {
             // Use this on iOS versions < 11 to use SFSafariViewController
            //self.sessionManager.initiateSession(with: scope, options: .clientOnly, presenting: self)
@@ -160,6 +169,9 @@ extension SpotifyHelper: SPTSessionManagerDelegate{
 
 
         self.delegate?.didFailAuthentication(with: error)
+//        if let link = URL(string: "https://accounts.spotify.com/authorize?client_id=\(SpotifyClientID)&response_type=code&redirect_uri=\(SpotifyRedirectURI)&scope=user-read-private%20user-read-email"){
+//                   UIApplication.shared.openURL(link)
+//               }
 
       //  presentAlertController(title: "Authorization Failed", message: error.localizedDescription, buttonTitle: "Bummer")
     }
@@ -179,7 +191,15 @@ extension SpotifyHelper: SPTSessionManagerDelegate{
       //  appRemote.connect()
     }
 
+    func sessionManager(manager: SPTSessionManager, shouldRequestAccessTokenWith code: String) -> Bool {
+        return true
+    }
 
+    // MARK: - Spotify web helpers
+    
+//    func getAccessToken
+    
+    
 
 
 }

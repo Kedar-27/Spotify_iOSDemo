@@ -96,7 +96,7 @@ class SpotifyHelper: NSObject{
                 self.sessionManager.initiateSession(with: scope, options: .clientOnly)
             }else{
                 if let link = URL(string: "https://accounts.spotify.com/authorize?client_id=\(SpotifyClientID)&response_type=code&redirect_uri=\(SpotifyRedirectURI)&scope=user-read-private%20user-read-email"){
-                           UIApplication.shared.openURL(link)
+                           UIApplication.shared.open(link)
                        }
             }
 

@@ -79,7 +79,7 @@ class TrackVC: UIViewController {
                 
                 do{
                     let jsonData = try JSONSerialization.data(withJSONObject: data as! NSDictionary, options: .prettyPrinted)
-                    let downloadedJson = try JSONDecoder().decode(TrackResponseModel.self, from: jsonData)
+                   // let downloadedJson = try JSONDecoder().decode(TrackResponseModel.self, from: jsonData)
                     
                     
                     self.tracksTextView.text = String(data: jsonData, encoding: .utf8)

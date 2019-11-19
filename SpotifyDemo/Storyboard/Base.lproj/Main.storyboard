@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ezv-b2-9pd">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginVC" customModule="SpotifyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmy-jZ-GQB">
+                                <rect key="frame" x="145" y="460" width="124" height="30"/>
+                                <color key="backgroundColor" red="0.094117647058823528" green="0.67450980392156867" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="CONNECT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="connectButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ng-SH-aj2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect your Spotify account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7J-Rg-Rrr">
+                                <rect key="frame" x="93" y="397" width="228" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="s7J-Rg-Rrr" firstAttribute="centerX" secondItem="Wmy-jZ-GQB" secondAttribute="centerX" id="8TU-Em-CUY"/>
+                            <constraint firstItem="Wmy-jZ-GQB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="B0e-B8-lm1"/>
+                            <constraint firstItem="Wmy-jZ-GQB" firstAttribute="top" secondItem="s7J-Rg-Rrr" secondAttribute="bottom" multiplier="1.1" id="KTx-tb-uAv"/>
+                            <constraint firstItem="Wmy-jZ-GQB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ecn-6M-VGj"/>
+                            <constraint firstItem="Wmy-jZ-GQB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="q7C-bL-me7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ope-3X-Jdd"/>
+                    <connections>
+                        <outlet property="connectButton" destination="Wmy-jZ-GQB" id="0h2-ip-MXC"/>
+                        <outlet property="messageLabel" destination="s7J-Rg-Rrr" id="r1g-Z9-Ymc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.82608695652186" y="18.75"/>
+        </scene>
+        <!--PlaylistVC-->
+        <scene sceneID="qaK-jX-ugZ">
+            <objects>
+                <viewController storyboardIdentifier="PlaylistVC" id="AVk-le-NAV" customClass="PlaylistVC" customModule="SpotifyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vHZ-cy-nfT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oo8-Oa-Sy4">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oo8-Oa-Sy4" firstAttribute="width" secondItem="vHZ-cy-nfT" secondAttribute="width" id="4uU-33-c4R"/>
+                            <constraint firstItem="oo8-Oa-Sy4" firstAttribute="height" secondItem="vHZ-cy-nfT" secondAttribute="height" id="N24-Wi-Gxf"/>
+                            <constraint firstItem="oo8-Oa-Sy4" firstAttribute="centerX" secondItem="piE-H9-EaJ" secondAttribute="centerX" id="tOD-w2-F2C"/>
+                            <constraint firstItem="oo8-Oa-Sy4" firstAttribute="centerY" secondItem="piE-H9-EaJ" secondAttribute="centerY" id="y1q-GD-JCw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="piE-H9-EaJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="playlistTableView" destination="oo8-Oa-Sy4" id="jML-1A-XzF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="372-gs-ESu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815.9420289855075" y="137.94642857142856"/>
+        </scene>
+        <!--Tracks ListVC-->
+        <scene sceneID="hJ9-sX-COq">
+            <objects>
+                <viewController storyboardIdentifier="TracksListVC" id="s3N-yl-lch" customClass="TracksListVC" customModule="SpotifyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h9W-jM-bZZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Wq-HM-mC4">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2Wq-HM-mC4" firstAttribute="height" secondItem="h9W-jM-bZZ" secondAttribute="height" id="CEx-jX-pdd"/>
+                            <constraint firstItem="2Wq-HM-mC4" firstAttribute="width" secondItem="h9W-jM-bZZ" secondAttribute="width" id="Gyh-0V-AKH"/>
+                            <constraint firstItem="2Wq-HM-mC4" firstAttribute="centerX" secondItem="9jH-PO-uRu" secondAttribute="centerX" id="bRh-XE-2ET"/>
+                            <constraint firstItem="2Wq-HM-mC4" firstAttribute="centerY" secondItem="9jH-PO-uRu" secondAttribute="centerY" id="t3a-JB-DbE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9jH-PO-uRu"/>
+                    </view>
+                    <connections>
+                        <outlet property="tracksTableView" destination="2Wq-HM-mC4" id="bsE-5v-pNv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXJ-ph-FXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2689.8550724637685" y="134.59821428571428"/>
+        </scene>
+        <!--TrackVC-->
+        <scene sceneID="rtA-hY-mcI">
+            <objects>
+                <viewController storyboardIdentifier="TrackVC" id="BVg-v4-gel" customClass="TrackVC" customModule="SpotifyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZTD-BN-qjc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJr-NO-wZs">
+                                <rect key="frame" x="0.0" y="184" width="414" height="538"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sJr-NO-wZs" firstAttribute="centerY" secondItem="cbb-mt-8Rx" secondAttribute="centerY" id="IOD-Ls-J55"/>
+                            <constraint firstItem="sJr-NO-wZs" firstAttribute="width" secondItem="ZTD-BN-qjc" secondAttribute="width" id="Jyz-hO-jss"/>
+                            <constraint firstItem="sJr-NO-wZs" firstAttribute="height" secondItem="ZTD-BN-qjc" secondAttribute="height" multiplier="0.6" id="SsH-bJ-tDp"/>
+                            <constraint firstItem="sJr-NO-wZs" firstAttribute="centerX" secondItem="cbb-mt-8Rx" secondAttribute="centerX" id="asv-kl-1YL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cbb-mt-8Rx"/>
+                    </view>
+                    <connections>
+                        <outlet property="tracksTextView" destination="sJr-NO-wZs" id="6bg-WG-SON"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wxG-s0-45e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3526" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uhW-Ne-SOa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ezv-b2-9pd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2AZ-G4-gnc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MJh-MB-Wxk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sxb-Xk-SDU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="-655.58035714285711"/>
+        </scene>
+    </scenes>
+</document>
